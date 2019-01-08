@@ -35,5 +35,6 @@ namespace BE
         // private  string GPS_Coordinates { get; set; }
         //  private struct Lat_Long {public double Latitude;  public double Longitude;}  
 
+
     }
 }
