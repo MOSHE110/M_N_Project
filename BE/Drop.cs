@@ -8,6 +8,7 @@ namespace BE
 {
     public class Drop
     {
+
         //public Drop(int id,int drop_Id, string drop_Adress, DateTime drop_time, List<Report> reports, double real_lat, double real_log, double estimeated_lat, double estimeated_log)
         //{
         //    Id= id;
