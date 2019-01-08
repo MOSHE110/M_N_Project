@@ -14,6 +14,7 @@ namespace BL
         
 
         DAL_imp dal = new DAL_imp();
+
         #region Report
         public bool AddReport(Report report)
         {
