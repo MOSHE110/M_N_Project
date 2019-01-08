@@ -89,7 +89,8 @@ namespace wpf_MVVM_EntityFramework
 
             //    flag = bl.RemoveDrop(d.Drop_Id);
             //    d.Drop_Id++;
-                
+                  
+
             //    }
 
             #endregion
