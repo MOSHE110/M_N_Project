@@ -88,6 +88,23 @@ namespace DAL
         }  // done
         public Drop GetDrop(int id)
         {
+            //using (var db =  new Entitys())
+            //{
+            //    var drop = (from d in db.Drops where d.Drop_Id == id select d).First();
+            //    return new Drop
+            //    {
+            //        Id = drop.Id,
+            //        Drop_Id = drop.Drop_Id,
+            //        Drop_Adress = drop.Drop_Adress,
+            //        Drop_time = drop.Drop_time,
+            //        Reports_list = drop.Reports_list,
+            //        Real_lat = drop.Real_lat,
+            //        Real_log = drop.Real_log,
+            //        Estimeated_lat = drop.Estimeated_lat,
+            //        Estimeated_log = drop.Estimeated_log,
+
+            //    };
+            //}
             using (var db = new Entitys())
             {
                 var dropToReturn = (from d in db.Drops where d.Drop_Id == id select d).First();

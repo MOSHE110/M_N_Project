@@ -281,6 +281,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ShowDropsCommand.cs" />
     <Compile Include="UserControls\AnalistPanel.xaml.cs">
       <DependentUpon>AnalistPanel.xaml</DependentUpon>
     </Compile>
@@ -296,6 +297,7 @@
     <Compile Include="UserControls\loginPanel.xaml.cs">
       <DependentUpon>loginPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\DropsMapVM.cs" />
     <Compile Include="windows_\maps.xaml.cs">
       <DependentUpon>maps.xaml</DependentUpon>
     </Compile>
@@ -381,7 +383,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>

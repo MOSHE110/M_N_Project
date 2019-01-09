@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using DAL;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace wpf_MVVM_EntityFramework
 {
@@ -69,6 +70,22 @@ namespace wpf_MVVM_EntityFramework
 
             };
             BL_imp bl = new BL_imp();
+            Drop dNati = new Drop
+            {
+                Id = 207544131,
+                Drop_Id = 207544131,
+                Drop_Adress = "ישראל יבנה הזמיר 4",
+                Drop_time = new DateTime(2010, 10, 10),
+
+                Reports_list = r,
+                Real_lat = 0,
+                Real_log = 0,
+                Estimeated_lat = 31.874153,
+                Estimeated_log = 34.741990,
+
+            };
+            bl.AddDrop(dNati);
+            
             for (int i = 0; i < 100; i++)
             {
                 Random random = new Random();
@@ -95,8 +112,18 @@ namespace wpf_MVVM_EntityFramework
 
             #endregion
             InitializeComponent();
-            
-
+            //var pushpinLayer = new MapLayer();
+            //pushpinLayer.Name = "PushPinLayer";
+            //myMap.Children.Add(pushpinLayer);
+            //Drop FromDB = bl.GetDropById(207544131);
+            ////var location = new Location(31.874153, 34.741990);
+            //var location = new Location(FromDB.Estimeated_lat, FromDB.Estimeated_log);
+            //// var location = new Location(31.874153, 34.741990);
+            //var pushpin = new Pushpin();
+            //pushpin.Name = "MyNewPushpin";
+            //pushpin.Background = new SolidColorBrush(Colors.Blue);
+            //pushpin.Location = location;
+            //pushpinLayer.AddChild(pushpin, location);
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -116,13 +143,32 @@ namespace wpf_MVVM_EntityFramework
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             Main.Content = new UserControls.C1maps();
-
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             Main.Content = new UserControls.loginPanel();
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            //Drop d = new Drop
+            //{
+            //    Id = 207544131,
+            //    Drop_Id = 207544131,
+            //    Drop_Adress = "ישראל יבנה הזמיר 4",
+
+            //    Reports_list = null,
+            //    Real_lat = 0,
+            //    Real_log = 0,
+            //    Estimeated_lat = 31.874153,
+            //    Estimeated_log = 34.741990,
+
+            //};
+            // bl.AddDrop(d);
+            
         }
     }
 }
