@@ -21,6 +21,7 @@ namespace BL
        Drop GetDropById(int id);
        void GetCoordinate(string address);//צריך לממש ולהחזיר LAT LOG
        void GetCoordinateFromExif(string imagePath);//צריך לממש ולהחזיר LAT LOG
-      
+
     }
+
 }

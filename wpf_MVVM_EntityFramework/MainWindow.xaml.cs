@@ -69,29 +69,29 @@ namespace wpf_MVVM_EntityFramework
 
             };
             BL_imp bl = new BL_imp();
-            //for (int i = 0; i < 100; i++)
-            //{
-            //    Random random = new Random();
+            for (int i = 0; i < 100; i++)
+            {
+                Random random = new Random();
 
-            //    const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            //    string random_Drop_Adress = new string(Enumerable.Repeat(chars, 8)
-            //    .Select(s => s[random.Next(s.Length)]).ToArray());
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                string random_Drop_Adress = new string(Enumerable.Repeat(chars, 8)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
 
-            //    bl.AddDrop(d);
-            //    d.Drop_Adress = random_Drop_Adress;
-            //    d.Drop_Id++;
-            //}
+                bl.AddDrop(d);
+                d.Drop_Adress = random_Drop_Adress;
+                d.Drop_Id++;
+            }
 
-            //bool flag = true;
-          
-            //while (flag)
-            //    {
+            bool flag = true;
 
-            //    flag = bl.RemoveDrop(d.Drop_Id);
-            //    d.Drop_Id++;
-                  
+            while (flag)
+            {
 
-            //    }
+                flag = bl.RemoveDrop(d.Drop_Id);
+                d.Drop_Id++;
+
+
+            }
 
             #endregion
             InitializeComponent();
