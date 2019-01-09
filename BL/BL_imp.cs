@@ -81,8 +81,8 @@ namespace BL
             //////////NOT DONE!!!!!!///////////////////////////////////////////////
             //getting number of cluster according to number of 10 minutes
             //and list of first times for each group 
-            int numClusters = 0;
-            
+            int numClusters = 3;//3 for testing 
+            List<DateTime> timeOfDrops = new List<DateTime>();
             int hour = 0;
              
             for (int i = 0; i < reports.Count; i++)
@@ -111,7 +111,20 @@ namespace BL
             //create drop objects and update them with estimated lat log and adress.
             for (int i = 0; i < numClusters; i++)
             {
-                dal.AddDrop(new Drop(i,adresses[i],));
+                Drop d=new Drop 
+                {
+                    Id = i,
+                    Drop_Id =i ,
+                    Drop_Adress = adresses[i],
+                    Drop_time = timeOfDrops[i],
+                    Reports_list = null,
+                    Real_lat = 0,
+                    Real_log = 0,
+                    Estimeated_lat = clustering[i][0],
+                    Estimeated_log = clustering[i][1],
+
+                };
+                dal.AddDrop(d);
             }
             return clustering;
 
