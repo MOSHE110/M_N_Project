@@ -4,9 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:wpf_MVVM_EntityFramework.UserControls"
-             xmlns:Wpf="clr-namespace:ThinkGeo.MapSuite.Wpf;assembly=ThinkGeo.MapSuite.Wpf" xmlns:WPF="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" x:Class="wpf_MVVM_EntityFramework.UserControls.DropsMap"
-             mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1400" >
+             xmlns:Wpf="clr-namespace:ThinkGeo.MapSuite.Wpf;assembly=ThinkGeo.MapSuite.Wpf"
+    xmlns:WPF="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" x:Class="wpf_MVVM_EntityFramework.UserControls.DropsMap"
+             
+    mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1400" 
+    xmlns:viewModel="clr-namespace:wpf_MVVM_EntityFramework.ViewModel">
+    <UserControl.Resources>
+        <viewModel:DropsMapVM x:Key="commandViewModel"  />
+    </UserControl.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
@@ -24,7 +31,7 @@
             <TextBox x:Name="txt_state"  Margin="10,10,10,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap"  Text="" VerticalAlignment="Top" />
             <Label Style="{StaticResource SpacificLabel4}" Margin="10,10,10,0" Content="ZIP CODE"/>
             <TextBox x:Name="txt_zip"  Margin="10,10,10,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap"    Text="" VerticalAlignment="Top"  />
-            <Button Content="serch"  Margin="10"  Width="50" Click="Button_Click"/>
+            <Button Content="Show drops" Width="75"/>
 
         </StackPanel>
         <WPF:Map Grid.Column="1" HorizontalAlignment="Left" Margin="396.333,0,0,0" VerticalAlignment="Top" Height="535" Width="575">

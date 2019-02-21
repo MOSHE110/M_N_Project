@@ -1,4 +1,6 @@
-﻿using Microsoft.Maps.MapControl.WPF;
+﻿using BE;
+using BL;
+using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +21,7 @@ using ThinkGeo.MapSuite.Layers;
 using ThinkGeo.MapSuite.Shapes;
 using ThinkGeo.MapSuite.Wpf;
 
+
 namespace wpf_MVVM_EntityFramework.UserControls
 {
     /// <summary>
@@ -34,8 +37,10 @@ namespace wpf_MVVM_EntityFramework.UserControls
             //Set map to Aerial mode with labels
             myMap.Mode = new AerialMode(true);
 
+            //"http://maps.google.com/maps?q=" +
+          //  WebBrowserGoogleMap.Navigate("https://www.google.com/maps?q=Shahal+Jerusalem+");
 
-           WebBrowserGoogleMap.Navigate("https://www.google.com/maps?q=Shahal+Jerusalem+") ;  
+            WebBrowserGoogleMap.Navigate("http://maps.google.com/maps?q=+יבנה הזמיר 4") ;  
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -83,7 +88,39 @@ namespace wpf_MVVM_EntityFramework.UserControls
                 MessageBox.Show(ex.Message.ToString(), "ERROR");
             }
         }
+        ///for testing/////////////////
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //var pushpinLayer = new MapLayer();
+            //pushpinLayer.Name = "PushPinLayer";
+            //myMap.Children.Add(pushpinLayer);
+            //BL_imp bl = new BL_imp();
+            //Drop d = new Drop
+            //{
+            //    Id = 207544131,
+            //    Drop_Id = 207544131,
+            //    Drop_Adress = "ישראל יבנה הזמיר 4",
 
+            //    Reports_list = null,
+            //    Real_lat = 0,
+            //    Real_log = 0,
+            //    Estimeated_lat = 31.874153,
+            //    Estimeated_log = 34.741990,
+
+            //};
+            // bl.AddDrop(d);
+            
+           //  Drop FromDB=bl.GetDropById(207544131);
+           // //var location = new Location(31.874153, 34.741990);
+           //var location = new Location(FromDB.Estimeated_lat, FromDB.Estimeated_log);
+           //// var location = new Location(31.874153, 34.741990);
+           // var pushpin = new Pushpin();
+           // pushpin.Name = "MyNewPushpin";
+           // pushpin.Background = new SolidColorBrush(Colors.Blue);
+           // pushpin.Location= location;
+           // pushpinLayer.AddChild(pushpin, location);
+        }
+        /////////////////////testing////////////
         //private void UserControl_Loaded(object sender, RoutedEventArgs e)
         //{
         //    WpfMap.MapUnit = GeographyUnit.DecimalDegree;

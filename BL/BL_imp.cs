@@ -49,10 +49,10 @@ namespace BL
         }
         public Drop GetDropById(int id)
         {
-            throw new NotImplementedException();
+            return dal.GetDrop(id);
         }
         #endregion
-      
+
 
 
         #region Functions
@@ -84,7 +84,7 @@ namespace BL
             int numClusters = 3;//3 for testing 
             List<DateTime> timeOfDrops = new List<DateTime>();
             int hour = 0;
-             
+            
             for (int i = 0; i < reports.Count; i++)
             {
                 if (reports[i].Time.Minute == 10)
