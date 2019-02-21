@@ -19,7 +19,7 @@ using System.Data.Entity.Infrastructure;
 using DAL;
 using Microsoft.Maps.MapControl.WPF;
 
-namespace wpf_MVVM_EntityFramework
+namespace wpf_MVVM_EntityFramework 
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
