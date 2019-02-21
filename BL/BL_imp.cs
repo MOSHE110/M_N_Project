@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class BL_imp : Ibl
+    public class BL_imp : Ibl 
     {
         
 
